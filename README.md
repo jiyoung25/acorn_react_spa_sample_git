@@ -6,7 +6,9 @@
 clone후에 폴더 안으로 이동한 다음
 
 >npm install
+
 해서 의존 모듈을 설치한 다음
 
 >npm start
+
 하면 시작할 수 있습니다.
