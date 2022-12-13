@@ -26,7 +26,7 @@ function App({location, match, history}) {
         <li><NavLink activeStyle={activeStyle} to="/game/mario">game mario</NavLink></li>
         <li><NavLink activeStyle={activeStyle} to="/buy?code=1&name=handphone">1번 상품 구매</NavLink></li>
         <li><NavLink activeStyle={activeStyle} to="/buy?code=2&name=water">2번 상품 구매</NavLink></li>
-        <li><NavLink activeStyle={activeStyle} to="/buy?code=4&name=coffe">3번 상품 구매</NavLink></li>
+        <li><NavLink activeStyle={activeStyle} to="/buy?code=4&name=coffee">3번 상품 구매</NavLink></li>
       </ul>
       <Route exact path="/" component={Home}/>
       <Route exact path="/study" component={Study}/>
