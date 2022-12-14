@@ -1,5 +1,5 @@
 import { NavLink, Route, withRouter } from "react-router-dom";
-import { Home, Study, Game, Buy, LoginPage } from "./pages";
+import { Home, Study, Game, Buy, Login } from "./pages";
 
 function App({location, match, history}) {
 
@@ -33,7 +33,7 @@ function App({location, match, history}) {
       <Route exact path="/study" component={Study}/>
       <Route exact path="/game" component={Game}/>
       <Route path="/game/:name" component={Game}/> {/* name이라는 이름의 경로 파라미터를 읽을 수 있도록 설정하기, 이럴땐 exact빼기 */}
-      <Route exact path = "/login" component = {LoginPage}/>
+      <Route exact path = "/login" component = {Login}/>
       <Route exact path="/buy" component={Buy}/>
     </div>
   );

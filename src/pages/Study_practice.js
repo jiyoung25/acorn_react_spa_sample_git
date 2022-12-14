@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 const Study = () => {
     const studyStyle = {
         backgroundColor:"blue",
-        height:"300px"
+        height:"300px",
+        color:"white"
     };
 
     return(

@@ -1,18 +1,20 @@
 // pages/Game.js
 
 const Game = ({match}) => {
+
     const gameStyle = {
-        backgroundColor:"green",
-        height:"300px"
+        backgroundColor: "yellow",
+        height: "300px"
     };
 
-    //"/game/:name"의 name을 읽어오기
-    let gameName = match.params.name; //경로 파라미터
+    let gameName = match.params.name;
+    console.log(gameName);
     if(!gameName){
         gameName = "기본";
     }
+
     return(
-        <div style = {gameStyle}>
+        <div style={gameStyle}>
             <h3>game페이지입니다.</h3>
             <p><strong>{gameName}</strong> 게임을 시작합니다. </p>
         </div>

@@ -1,11 +1,8 @@
 import { NavLink, Route, withRouter } from "react-router-dom";
 import { Home, Study, Game, Buy } from "./pages";
 
-function App({location, match, history}) {
+function App_p({location, match, history}) {
 
-  
-
-  //active되었을 때 어떤 css를 적용할지 미리 정한 다음에 적용시킬 수 있다.
   const activeStyle = {
     color:"red",
     fontWeight: "bold"
@@ -13,29 +10,29 @@ function App({location, match, history}) {
 
   return (
     <div className="container">
-      <h1>React Router</h1>
+      <h1>react router</h1>
       <button onClick={() => {
-        history.push("/study");
-      }}>공부하러 가기</button>
+        history.push("/study")
+      }}>
+        공부하기
+      </button>
       <ul>
-        <li><NavLink to="/">home</NavLink></li>
-        <li><NavLink to="/study">study</NavLink></li>
-        <li><NavLink to="/game">game</NavLink></li>
-        <li><NavLink to="/game/starcraft" activeStyle={activeStyle}>game_starcraft</NavLink></li>
-        <li><NavLink to="/game/mario" activeStyle={activeStyle}>game_mario</NavLink></li>
-        <li><NavLink to="/buy?code=1&name=handphone"></NavLink></li>
-        <li><NavLink to="/buy?code=2&name=water"></NavLink></li>
-        <li><NavLink to="/buy?code=4&name=coffee"></NavLink></li>
+        <li><NavLink to = "/" activeStyle={activeStyle}>홈으로</NavLink></li>
+        <li><NavLink to = "/study" activeStyle={activeStyle}>공부</NavLink></li>
+        <li><NavLink to = "/game" activeStyle={activeStyle}>게임</NavLink></li>
+        <li><NavLink to = "/game/starcraft" activeStyle={activeStyle}>게임(스타)</NavLink></li>
+        <li><NavLink to = "/game/mario" activeStyle={activeStyle}>게임(마리오)</NavLink></li>
+        <li><NavLink to = "/buy?code=1&name=handphone" activeStyle={activeStyle}>구매1</NavLink></li>
+        <li><NavLink to = "/buy?code=2&name=water" activeStyle={activeStyle}>구매2</NavLink></li>
+        <li><NavLink to = "/buy?code=4&name=battery" activeStyle={activeStyle}>구매3</NavLink></li>
       </ul>
-      <Route exact path = "/" component={Home}></Route>
-      <Route exact path = "/study" component={Study}></Route>
-      <Route exact path = "/game" component={Game}></Route>
-      <Route exact path = "/game/:name" component={Game}></Route>
-      <Route exact path = "/buy" component={Buy}></Route>
+      <Route exact path = "/study" component={Study} />
+      <Route exact path = "/" component = {Home} />
+      <Route exact path = "/game/" component = {Game} />
+      <Route path = "/game/:name" component = {Game} />
+      <Route exact path = "/buy" component = {Buy} />
     </div>
   );
 }
 
-
-//withRouter()함수를 호출해서 export해주면 Router에 관련된 props가 이 컴포넌트에 전달된다.
-export default withRouter(App);
+export default withRouter(App_p);
